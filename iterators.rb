@@ -34,11 +34,11 @@ end
 # Return a new array of the ordinals (1 -> 1st) of the numbers given.
 def ordinals(numbers)
   numbers.map do |number|
-    if (number % 10 || number) == 1
+    if number % 10 == 1
       number.to_s + "st"
-    elsif (number % 10 || number) == 2
+    elsif number % 10  == 2
       number.to_s + "nd"
-    elsif (number % 10 || number) == 3
+    elsif number % 10  == 3
       number.to_s + "rd"
     else
       number.to_s + "th"
